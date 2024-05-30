@@ -1,8 +1,8 @@
 import axios, {AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 import { authUtil } from './authUtil';
 
-const API_BASE_URL = 'http://localhost:8000/api'; // Update with your backend API URL
-
+const API_BASE_URL = process.env.REACT_APP_BASE_URL
+console.log(API_BASE_URL)
 const api = axios.create({
     baseURL: API_BASE_URL,
 });
